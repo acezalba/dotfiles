@@ -95,3 +95,6 @@ fabric.properties
 # ===== Personal ===== #
 # This block must always be at last of gitignore
 acezalba/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
