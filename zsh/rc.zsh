@@ -73,12 +73,20 @@ export NVM_DIR="$HOME/src/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# 2024-04-17, 09:05:39 PM - python-poetry completions
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
+
+
 # ===== OMZ =================================== #
 
 # OMZ settings
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="dst"
-plugins=()
+plugins=(
+    git
+    poetry
+    )
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 60
 
