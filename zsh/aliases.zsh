@@ -9,12 +9,26 @@ alias rm='echo "Use trash-put instead. Temporarily disable the alias if rm is ne
 
 # --- Pyenv aliases
 # Force zsh to use the pyenv install by default
+# Force a different version by either
+# pyenv local, pyenv shell,
+# or using the system python, i.e. usr/bin/python3
 
 # Double check if this value exists in .pyenv/versions
-export PYVERSION=3.11.9
+export PYVERSION=3.11.9 
 
 alias python='$PYENV_ROOT/versions/$PYVERSION/bin/python'
 alias python3='$PYENV_ROOT/versions/$PYVERSION/bin/python3'
+
+# --- NVM aliases
+# Force zsh to use the nvm install by default
+
+# Double check if this value exists in versions/node
+export NODEVERSION=20.12.2 # lts
+
+alias node="$NVM_DIR/versions/node/v$NODEVERSION/bin/node"
+alias corepack="$NVM_DIR/versions/node/v$NODEVERSION/bin/corepack"
+alias npm="$NVM_DIR/versions/node/v$NODEVERSION/bin/npm"
+alias npx="$NVM_DIR/versions/node/v$NODEVERSION/bin/npx"
 
 # --- Carryover settings from repo
 
