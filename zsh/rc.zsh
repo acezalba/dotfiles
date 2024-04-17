@@ -61,6 +61,12 @@ export ANSIBLE_CONFIG="$HOME/playbooks/ansible.cfg"
 # debug: expose my roles path for ansible
 export ANSIBLE_ROLES_PATH="$HOME/playbooks/roles/"
 
+# 2024-04-17, 08:06:06 PM - pyenv shims
+# added pyenv shims
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # ===== OMZ =================================== #
 
 # OMZ settings
