@@ -5,7 +5,6 @@ source_if_exists () {
 }
 
 # SOURCE
-
 source_if_exists $HOME/.env.sh
 source_if_exists $DOTFILES/zsh/history.zsh
 source_if_exists $DOTFILES/zsh/git.zsh
@@ -35,8 +34,24 @@ precmd() {
 export VISUAL=nvim
 export EDITOR=nvim
 
-# PATHS
-export PATH="$PATH:/usr/local/sbin:$DOTFILES/bin:$HOME/.local/bin:$DOTFILES/scripts/"
+# ====== PATHS ================================ #
+
+# Source system path
+source /etc/environment
+
+# Add home bin to path
+export PATH="$PATH:$HOME/bin"
+
+# Add rc repo bin to path
+export PATH="$PATH:$DOTFILES/bin"
+
+# Add .local/bin to path
+export PATH="$PATH:$HOME/.local/bin"
+
+# Add rc repo scripts to path
+ export PATH="$PATH:$DOTFILES/scripts/"
+
+# ===== OMZ =================================== #
 
 # OMZ settings
 export ZSH="$HOME/.oh-my-zsh"
