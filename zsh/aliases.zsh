@@ -1,3 +1,14 @@
+# ---  Personal aliases
+
+# Trash-cli aliases
+alias delete='trash-put'
+alias clear-trash='trash-empty'
+alias restore='trash-restore'
+alias force-delete='trash-rm'
+alias rm='echo "Use trash-put instead. Temporarily disable the alias if rm is necessary"; false'
+
+# --- Carryover settings from repo
+
 # ALIASES ---------------------------------------------------------------------
 alias unmount_all_and_exit='unmount_all && exit'
 alias d=docker
@@ -9,20 +20,13 @@ alias v='nvim -w ~/.vimlog "$@"'
 alias vi='nvim -w ~/.vimlog "$@"'
 alias vim='nvim -w ~/.vimlog "$@"'
 
-# alias zn='vim $NOTES_DIR/$(date +"%Y%m%d%H%M.md")'
-
-# alias ta='tmux attach -t'
-
 alias l='exa -lah'
 alias ls=exa
 alias sl=exa
 alias c='clear'
 alias s='source ~/.zshrc'
-# alias h=heroku
 alias jj='pbpaste | jsonpp | pbcopy'
-alias rm='echo "Use trash-put instead. Temporarily disable the alias if rm is necessary"; false'
 alias trim="awk '{\$1=\$1;print}'"
-# alias notes="cd $NOTES_DIR && nvim 00\ HOME.md"
 
 # GIT ALIASES -----------------------------------------------------------------
 alias gc='git commit'
