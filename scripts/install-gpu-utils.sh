@@ -18,5 +18,5 @@ echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/rickslab-agent.gpg] https://
 sudo apt update
 
 # install gpu-utils
-sudo apt install rickslab-gpu-utils -y
+sudo apt install clinfo rickslab-gpu-utils -y
 
