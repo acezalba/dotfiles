@@ -7,6 +7,15 @@ alias restore='trash-restore'
 alias force-delete='trash-rm'
 alias rm='echo "Use trash-put instead. Temporarily disable the alias if rm is necessary"; false'
 
+# --- Pyenv aliases
+# Force zsh to use the pyenv install by default
+
+# Double check if this value exists in .pyenv/versions
+export PYVERSION=3.11.9
+
+alias python='$PYENV_ROOT/versions/$PYVERSION/bin/python'
+alias python3='$PYENV_ROOT/versions/$PYVERSION/bin/python3'
+
 # --- Carryover settings from repo
 
 # ALIASES ---------------------------------------------------------------------
