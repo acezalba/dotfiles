@@ -51,6 +51,16 @@ export PATH="$PATH:$HOME/.local/bin"
 # Add rc repo scripts to path
  export PATH="$PATH:$DOTFILES/scripts/"
 
+# ===== APP VARS ============================== #
+
+# 2024-02-24, 07:45:50 AM - ansible config
+# Expose my home playbook as the default
+export ANSIBLE_CONFIG="$HOME/playbooks/ansible.cfg"
+
+# 2024-03-19, 09:33:59 AM - ansible roles path
+# debug: expose my roles path for ansible
+export ANSIBLE_ROLES_PATH="$HOME/playbooks/roles/"
+
 # ===== OMZ =================================== #
 
 # OMZ settings
