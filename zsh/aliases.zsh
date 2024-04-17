@@ -20,7 +20,7 @@ alias c='clear'
 alias s='source ~/.zshrc'
 # alias h=heroku
 alias jj='pbpaste | jsonpp | pbcopy'
-alias rm=trash-put
+alias rm='echo "Use trash-put instead. Temporarily disable the alias if rm is necessary"; false'
 alias trim="awk '{\$1=\$1;print}'"
 # alias notes="cd $NOTES_DIR && nvim 00\ HOME.md"
 
