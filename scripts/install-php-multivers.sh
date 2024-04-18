@@ -20,7 +20,7 @@ sudo apt install libssl-dev -y
 sudo apt install imagemagick -y
 sudo apt install apache2 -y
 
-function install_php_extensions() {
+install_php_extensions() {
   # Array of PHP extensions required by WordPress
   php_extensions=("bc" "curl" "dom" "exif" "gd" "fpm" "imagick" "iconv" "intl" "mbstring" "mysqli" "soap" "shmop" "xml" "xmlrpc" "zip" )
 
