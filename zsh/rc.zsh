@@ -77,6 +77,10 @@ export NVM_DIR="$HOME/src/.nvm"
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 
+# 2024-04-18, 11:48:42 AM - pipx enable completions
+# check if pipx install argcomplete was done
+eval "$(register-python-argcomplete pipx)"
+
 
 # ===== OMZ =================================== #
 
