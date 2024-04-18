@@ -30,6 +30,19 @@ alias corepack="$NVM_DIR/versions/node/v$NODEVERSION/bin/corepack"
 alias npm="$NVM_DIR/versions/node/v$NODEVERSION/bin/npm"
 alias npx="$NVM_DIR/versions/node/v$NODEVERSION/bin/npx"
 
+# --- Ansible personal aliases
+
+ansible-playbook-alias() {
+  ansible-playbook $HOME/playbooks/playbooks/"$@"
+}
+
+playbook-syntax-check-alias() {
+  ansible-playbook --syntax-check $HOME/playbooks/playbooks/"$@"
+}
+
+alias ans="ansible-playbook-alias"
+alias anscheck="playbook-syntax-check-alias"
+
 # --- Carryover settings from repo
 
 # ALIASES ---------------------------------------------------------------------
