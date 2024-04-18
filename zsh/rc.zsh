@@ -49,7 +49,10 @@ export PATH="$PATH:$DOTFILES/bin"
 export PATH="$PATH:$HOME/.local/bin"
 
 # Add rc repo scripts to path
- export PATH="$PATH:$DOTFILES/scripts/"
+export PATH="$PATH:$DOTFILES/scripts/"
+
+# 2024-04-18, 01:15:33 PM - neovim path
+export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # ===== APP VARS ============================== #
 
@@ -78,10 +81,8 @@ fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 
 # 2024-04-18, 11:48:42 AM - pipx enable completions
-# check if pipx install argcomplete was done
 fpath=( /home/ghost/.local/lib/python3.11/site-packages/argcomplete/bash_completion.d "${fpath[@]}" )
 eval "$(register-python-argcomplete pipx)"
-
 
 # ===== OMZ =================================== #
 
