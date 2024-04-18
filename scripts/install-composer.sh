@@ -5,7 +5,7 @@
 
 # Modified to make composer phar global
 
-function download_composer() {
+download_composer() {
     EXPECTED_CHECKSUM="$(php -r 'copy("https://composer.github.io/installer.sig", "php://stdout");')"
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
     ACTUAL_CHECKSUM="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
@@ -18,13 +18,13 @@ function download_composer() {
     fi
 
     php composer-setup.php --quiet
-    RESULT=$?
     rm composer-setup.php
 }
 
-function make_composer_global() {
+make_composer_global() {
     sudo mv composer.phar /usr/local/bin/composer
 }
 
+cd $HOME
 download_composer
 make_composer_global
