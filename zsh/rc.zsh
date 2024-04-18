@@ -79,6 +79,7 @@ autoload -Uz compinit && compinit
 
 # 2024-04-18, 11:48:42 AM - pipx enable completions
 # check if pipx install argcomplete was done
+fpath=( /home/ghost/.local/lib/python3.11/site-packages/argcomplete/bash_completion.d "${fpath[@]}" )
 eval "$(register-python-argcomplete pipx)"
 
 
