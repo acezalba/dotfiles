@@ -17,9 +17,13 @@ dir="/home/ghost/src/"
 #     exit 1
 # fi
 
+install_dependencies(){
+    sudo apt install -y uchardet hunspell
+}
+
 clone_repo(){
     git clone $repo $dir/calibre
 }
 
-
+install_dependencies
 clone_repo
