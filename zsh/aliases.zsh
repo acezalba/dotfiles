@@ -15,7 +15,7 @@ alias rm='echo "Use trash-put instead. Temporarily disable the alias if rm is ne
 
 # Double check if this value exists in .pyenv/versions
 export PYVERSION=3.11.9 
-export PYBIN="PYENV_ROOT/versions/$PYVERSION/bin"
+export PYBIN="$PYENV_ROOT/versions/$PYVERSION/bin"
 
 alias python="$PYBIN/python"
 alias python3="$PYBIN/python3"
