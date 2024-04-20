@@ -24,11 +24,12 @@ alias python3='$PYENV_ROOT/versions/$PYVERSION/bin/python3'
 
 # Double check if this value exists in versions/node
 export NODEVERSION=20.12.2 # lts
+export NODEBIN="$NVM_DIR/versions/node/v$NODEVERSION/bin"
 
-alias node="$NVM_DIR/versions/node/v$NODEVERSION/bin/node"
-alias corepack="$NVM_DIR/versions/node/v$NODEVERSION/bin/corepack"
-alias npm="$NVM_DIR/versions/node/v$NODEVERSION/bin/npm"
-alias npx="$NVM_DIR/versions/node/v$NODEVERSION/bin/npx"
+alias node="$NODEBIN/node"
+alias corepack="$NODEBIN/corepack"
+alias npm="$NODEBIN/npm"
+alias npx="$NODEBIN/npx"
 
 # --- Ansible personal aliases
 
