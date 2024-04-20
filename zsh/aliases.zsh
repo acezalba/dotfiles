@@ -15,9 +15,10 @@ alias rm='echo "Use trash-put instead. Temporarily disable the alias if rm is ne
 
 # Double check if this value exists in .pyenv/versions
 export PYVERSION=3.11.9 
+export PYBIN="PYENV_ROOT/versions/$PYVERSION/bin"
 
-alias python='$PYENV_ROOT/versions/$PYVERSION/bin/python'
-alias python3='$PYENV_ROOT/versions/$PYVERSION/bin/python3'
+alias python="$PYBIN/python"
+alias python3="$PYBIN/python3"
 
 # --- NVM aliases
 # Force zsh to use the nvm install by default
