@@ -21,7 +21,8 @@ dir="/home/ghost/src/"
 # Calibre requires a compiled version of podofo. v0.10. refer to repo.
 # todo: compile and expose podofo to linux lib path.
 install_dependencies(){
-    sudo apt install -y libuchardet-dev libhunspell-dev libpodofo-dev libstemmer-dev libpodofo-utils libpodofo0.9.7    
+    sudo apt install -y libuchardet-dev libhunspell-dev libpodofo-dev libstemmer-dev libpodofo-utils libpodofo0.9.7  \
+        libxcb-cursor-dev libxcb-cursor-0
 }
 
 clone_repo(){
