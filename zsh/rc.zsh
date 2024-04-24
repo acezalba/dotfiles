@@ -81,13 +81,16 @@ fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 
 # 2024-04-18, 11:48:42 AM - pipx enable completions
-fpath=( /home/ghost/.local/lib/python3.11/site-packages/argcomplete/bash_completion.d "${fpath[@]}" )
+fpath=( $HOME/.local/lib/python3.11/site-packages/argcomplete/bash_completion.d "${fpath[@]}" )
 eval "$(register-python-argcomplete pipx)"
 
 # 2024-04-20, 04:40:07 PM - Calibre dev path vars
-export CALIBRE_DEVELOP_FROM="/home/ghost/src/calibre/src"
-export BYPY_LOCATION="/home/ghost/src/goyalbypy"
+export CALIBRE_DEVELOP_FROM="$HOME/src/calibre/src"
+export BYPY_LOCATION="$HOME/src/goyalbypy"
 # export CALIBRE_PYTHON_PATH="$PYBIN"
+
+# 2024-04-25, 07:35:48 AM - yt-dlp and other scripts using xdg
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # ===== OMZ =================================== #
 
