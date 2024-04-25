@@ -8,4 +8,4 @@
 
 sudo add-apt-repository ppa:go-for-it-team/go-for-it-daily
 sudo apt update
-sudo apt install go-for-it
+sudo apt install go-for-it -y
