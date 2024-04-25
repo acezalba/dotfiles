@@ -1,5 +1,8 @@
 # ---  Personal aliases
 
+# Alias to access dotfiles
+alias dotfiles="cd $HOME/bin/dotfiles"
+
 # Trash-cli aliases
 alias delete='trash-put'
 alias clear-trash='trash-empty'
