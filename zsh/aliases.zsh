@@ -3,6 +3,14 @@
 # Alias to access dotfiles
 alias dotfiles="cd $HOME/bin/dotfiles"
 
+writescript-alias() {
+  touch "$HOME"/bin/dotfiles/scripts/"$@"
+  chmod +x "$HOME"/bin/dotfiles/scripts/"$@"
+  subl "$HOME"/bin/dotfiles/scripts/"$@"
+}
+
+alias newscript=writescript-alias
+
 # Trash-cli aliases
 alias delete='trash-put'
 alias clear-trash='trash-empty'
