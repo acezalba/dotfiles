@@ -53,8 +53,8 @@ playbook-syntax-check-alias() {
   ansible-playbook --syntax-check $HOME/playbooks/playbooks/"$@"
 }
 
-alias ans="ansible-playbook-alias"
-alias anscheck="playbook-syntax-check-alias"
+alias ansibleplay="ansible-playbook-alias"
+alias ansiblecheck="playbook-syntax-check-alias"
 
 # --- Git personal aliases
 
