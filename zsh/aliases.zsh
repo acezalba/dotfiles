@@ -56,6 +56,10 @@ playbook-syntax-check-alias() {
 alias ans="ansible-playbook-alias"
 alias anscheck="playbook-syntax-check-alias"
 
+# --- Git personal aliases
+
+alias commitchanges="git add -A && git commit"
+
 # --- Carryover settings from repo
 
 # ALIASES ---------------------------------------------------------------------
