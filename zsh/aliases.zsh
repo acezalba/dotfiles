@@ -1,12 +1,12 @@
 # ---  Personal aliases
 
 # Alias to access dotfiles
-alias dotfiles="cd $HOME/bin/dotfiles"
+alias dotfiles="cd $DOTFILES"
 
 writescript-alias() {
-  touch "$HOME"/bin/dotfiles/scripts/"$@"
-  chmod +x "$HOME"/bin/dotfiles/scripts/"$@"
-  subl "$HOME"/bin/dotfiles/scripts/"$@"
+  touch "$DOTFILES"/scripts/"$@"
+  chmod +x "$DOTFILES"/scripts/"$@"
+  subl "$DOTFILES"/scripts/"$@"
 }
 
 alias newscript=writescript-alias
