@@ -20,18 +20,24 @@ download_tarball(){
 extract_tarball(){
     downloaded_tarfile=$1
     rename_parent=$2
-    tar -xf "$downloaded_tarfile"
+    tar -xf "/tmp/${downloaded_tarfile}" -C /tmp
     tar -tf "/tmp/${downloaded_tarfile}" | head -1 | cut -d/ -f1 | xargs -I {} mv "/tmp/{}" "/tmp/${rename_parent}" 
 }
 
-# TODO: command checks for overwrites/if exists
 install_tarball(){
     app=$1
     location=$2
-    sudo rm -rf "$location/$app"
+    # if reuse, modify var to match executable in actual dir/desktop file.
+    # this is used in overwriting exec key in desktop file.
+    # to allow for edits via the gui (symlink breaks this)
+    exec_path="$location/$app/$app -url %U"
+    sudo rm -rf "$location"/"$app"
     sudo mv "/tmp/$app" "$location"
     sudo bash "$location"/"$app"/set_launcher_icon
-    ln -s "$location"/"$app"/zotero.desktop "$HOME"/.local/share/applications/zotero.desktop
+
+    sudo rm -rf "$HOME"/.local/share/applications/"$app".desktop
+    cp -f "$location"/"$app"/"$app".desktop "$HOME"/.local/share/applications/"$app".desktop
+    sed -i 's|^Exec=.*|Exec='"$exec_path"'|' "$HOME"/.local/share/applications/"$app".desktop 
 }
 
 download_tarball "$install_link" "$install_name"
