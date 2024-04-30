@@ -59,6 +59,7 @@ alias ansiblecheck="playbook-syntax-check-alias"
 # --- Git personal aliases
 
 alias commitchanges="git add -A && git commit"
+alias ch="git add -A && git commit"
 alias amendlatest="git add -A && git commit --amend --no-edit"
 
 # --- Carryover settings from repo
