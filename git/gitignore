@@ -229,6 +229,7 @@ dist
 # This block must always be at last of gitignore
 acezalba/
 project_kb/
+project_kb
 *.sublime-project
 *.sublime-workspace
 *.code-workspace
