@@ -62,6 +62,11 @@ alias commitchanges="git add -A && git commit"
 alias ch="git add -A && git commit"
 alias amendlatest="git add -A && git commit --amend --no-edit"
 
+# --- WordPress Assist Tools
+
+alias makethemejson="cat theme.yaml | yq e -o json > theme.json"
+alias makethemeyaml="yq -Poy theme.json > theme.yaml"
+
 # --- Carryover settings from repo
 
 # ALIASES ---------------------------------------------------------------------
