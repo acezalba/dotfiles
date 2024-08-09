@@ -18,30 +18,31 @@ alias restore='trash-restore'
 alias force-delete='trash-rm'
 alias rm='echo "Use trash-put instead. Temporarily disable the alias if rm is necessary"; false'
 
-# --- Pyenv aliases
-# Force zsh to use the pyenv install by default
-# Force a different version by either
-# pyenv local, pyenv shell,
-# or using the system python, i.e. usr/bin/python3
+# --- Python alias
+# Rather than forcing the python3 version from the CLI
+# Make sure that you always know which python3 is being called
+# From the environment.
 
-# Double check if this value exists in .pyenv/versions
-export PYVERSION=3.11.9 
-export PYBIN="$PYENV_ROOT/versions/$PYVERSION/bin"
+# python3-alias() {
+#     echo "============================"
+#     echo "$(which python3) was used."
+#     echo "============================"
+#     command python3 "$@"
+# }
 
-alias python="$PYBIN/python"
-alias python3="$PYBIN/python3"
+# alis python3 = "python3-alias"
 
 # --- NVM aliases
 # Force zsh to use the nvm install by default
 
 # Double check if this value exists in versions/node
-export NODEVERSION=20.12.2 # lts
-export NODEBIN="$NVM_DIR/versions/node/v$NODEVERSION/bin"
+# export NODEVERSION=20.12.2 # lts
+# export NODEBIN="$NVM_DIR/versions/node/v$NODEVERSION/bin"
 
-alias node="$NODEBIN/node"
-alias corepack="$NODEBIN/corepack"
-alias npm="$NODEBIN/npm"
-alias npx="$NODEBIN/npx"
+# alias node="$NODEBIN/node"
+# alias corepack="$NODEBIN/corepack"
+# alias npm="$NODEBIN/npm"
+# alias npx="$NODEBIN/npx"
 
 # --- Ansible personal aliases
 

@@ -31,6 +31,18 @@ precmd() {
     source $DOTFILES/zsh/aliases.zsh
 }
 
+preexec() {
+    local full_command="$1"
+    local cmd
+    cmd=$(echo "$full_command" | awk '{print $1}')
+
+    echo " "
+    echo "Running command using:"
+    echo "$(which $cmd)"
+    echo " "
+
+}
+
 export VISUAL=nvim
 export EDITOR=nvim
 
