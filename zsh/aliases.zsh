@@ -68,6 +68,10 @@ alias amendlatest="git add -A && git commit --amend --no-edit"
 alias makethemejson="cat theme.yaml | yq e -o json > theme.json"
 alias makethemeyaml="yq -Poy theme.json > theme.yaml"
 
+# --- WordPress Assist Tools
+
+alias addassets="ln -s $HOME/lib/assets ./assets"
+
 # --- Carryover settings from repo
 
 # ALIASES ---------------------------------------------------------------------
