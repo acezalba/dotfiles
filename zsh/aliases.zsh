@@ -14,23 +14,23 @@ alias rm='echo "Use trash-put instead. Temporarily disable the alias if rm is ne
 # or using the system python, i.e. usr/bin/python3
 
 # Double check if this value exists in .pyenv/versions
-export PYVERSION=3.11.9 
-export PYBIN="$PYENV_ROOT/versions/$PYVERSION/bin"
+# export PYVERSION=3.11.9 
+# export PYBIN="$PYENV_ROOT/versions/$PYVERSION/bin"
 
-alias python="$PYBIN/python"
-alias python3="$PYBIN/python3"
+# alias python="$PYBIN/python"
+# alias python3="$PYBIN/python3"
 
 # --- NVM aliases
 # Force zsh to use the nvm install by default
 
 # Double check if this value exists in versions/node
-export NODEVERSION=20.12.2 # lts
-export NODEBIN="$NVM_DIR/versions/node/v$NODEVERSION/bin"
+# export NODEVERSION=20.12.2 # lts
+# export NODEBIN="$NVM_DIR/versions/node/v$NODEVERSION/bin"
 
-alias node="$NODEBIN/node"
-alias corepack="$NODEBIN/corepack"
-alias npm="$NODEBIN/npm"
-alias npx="$NODEBIN/npx"
+# alias node="$NODEBIN/node"
+# alias corepack="$NODEBIN/corepack"
+# alias npm="$NODEBIN/npm"
+# alias npx="$NODEBIN/npx"
 
 # --- Ansible personal aliases
 
